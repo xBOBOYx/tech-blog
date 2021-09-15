@@ -115,7 +115,7 @@ router.put('/:id', (req, res) => {
   })
     .then(userData => {
       if (!userData) {
-        res.status(404).json({ message: 'No user found with this id' });
+        res.status(404).json({ message: 'No user found' });
         return;
       }
       res.json(userData);
@@ -134,7 +134,7 @@ router.delete('/:id', (req, res) => {
   })
     .then(userData => {
       if (!userData) {
-        res.status(404).json({ message: 'No user found with this id' });
+        res.status(404).json({ message: 'No user found' });
         return;
       }
       res.json(userData);
