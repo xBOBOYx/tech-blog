@@ -39,5 +39,5 @@ Comment.init(
     }
 );
 
-mudule.exports = Comment;
+module.exports = Comment;
             
