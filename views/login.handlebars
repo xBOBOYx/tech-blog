@@ -1,0 +1,67 @@
+<form class="login-form">
+  <div>
+    <label for="email-login">email:</label>
+    <input type="text" id="email-login" />
+  </div>
+  <div>
+    <label for="password-login">password:</label>
+    <input type="password" id="password-login" />
+  </div>
+  <div>
+    <button type="submit">login</button>
+  </div>
+</form>
+
+
+
+
+
+<div class="mt-16 sm:mt-24 lg:mt-0 lg:col-span-6">
+  <div class="bg-white sm:max-w-md sm:w-full sm:mx-auto sm:rounded-lg sm:overflow-hidden">
+    <div class="px-4 py-8 sm:px-10">
+      <div>
+        <p class="text-sm font-medium text-gray-700">
+          Create an account!
+        </p>
+        <div class="mt-1 grid grid-cols-3 gap-3">
+        </div>
+      </div>
+
+      <div class="mt-6 relative">
+        <div class="absolute inset-0 flex items-center" aria-hidden="true">
+          <div class="w-full border-t border-gray-300"></div>
+        </div>
+        <div class="relative flex justify-center text-sm">
+        </div>
+      </div>
+      <div class="mt-6">
+        <form class="signup-form" action="signup-form" method="POST" class="space-y-6">
+          <div>
+            <label for="username-signup" class="sr-only">Username</label>
+            <input type="text" name="name" id="username-signup" autocomplete="name" placeholder="Username" required
+              class="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+          </div>
+
+          <div>
+            <label for="email-signup" class="sr-only">Email</label>
+            <input type="text" name="email-signup" id="email-signup" autocomplete="email" placeholder="Email" required
+              class="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+          </div>
+
+          <div>
+            <label for="password-signup" class="sr-only">Password</label>
+            <input id="password-signup" name="password" type="password" placeholder="Password"
+              autocomplete="current-password" required
+              class="block w-full shadow-sm focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-300 rounded-md">
+          </div>
+
+          <div>
+            <button type="submit"
+              class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+              signup
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="/js/login.js"></script>
