@@ -20,5 +20,9 @@
     "mysql2": "^2.3.0",
     "sequelize": "^6.6.5",
     "tailwindcss": "^2.2.15"
+  },
+  "production": {
+    "use_env_variable": "JAWSDB_URL",
+    "dialect": "mysql"
   }
 }
