@@ -7,7 +7,7 @@ router.get('/', (req, res) => {
   Post.findAll({
     attributes: [
       'id',
-      'post_url',
+      'post_content',
       'title',
       'created_at',
     ],
@@ -40,7 +40,7 @@ router.get('/:id', (req, res) => {
     },
     attributes: [
       'id',
-      'post_url',
+      'post_content',
       'title',
       'created_at',
     ],
@@ -61,7 +61,7 @@ router.get('/:id', (req, res) => {
   })
     .then(postData => {
       if (!postData) {
-        res.status(404).json({ message: 'No post found' });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(postData);
@@ -75,7 +75,7 @@ router.get('/:id', (req, res) => {
 router.post('/', withAuth, (req, res) => {
   Post.create({
     title: req.body.title,
-    post_url: req.body.post_url,
+    post_content: req.body.post_content,
     user_id: req.session.user_id
   })
     .then(postData => res.json(postData))
@@ -99,7 +99,7 @@ router.put('/:id', withAuth, (req, res) => {
   )
     .then(postData => {
       if (!postData) {
-        res.status(404).json({ message: 'No post found' });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(postData);
@@ -119,7 +119,7 @@ router.delete('/:id', withAuth, (req, res) => {
   })
     .then(postData => {
       if (!postData) {
-        res.status(404).json({ message: 'No post found' });
+        res.status(404).json({ message: 'No post found with this id' });
         return;
       }
       res.json(postData);

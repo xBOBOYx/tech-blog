@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Comment } = require('../../models/Comments');
+const { Comment } = require('../../models');
 const withAuth = require('../../utils/auth');
 
 router.get('/', (req, res) => {
@@ -34,7 +34,7 @@ router.delete('/:id', withAuth, (req, res) => {
   })
     .then(commentData => {
       if (!commentData) {
-        res.status(404).json({ message: 'No comment found!' });
+        res.status(404).json({ message: 'No comment found with this id!' });
         return;
       }
       res.json(commentData);
